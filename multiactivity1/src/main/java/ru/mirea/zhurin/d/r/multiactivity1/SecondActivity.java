@@ -1,5 +1,7 @@
 package ru.mirea.zhurin.d.r.multiactivity1;
 
+import static android.content.ContentValues.TAG;
+
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -7,6 +9,7 @@ import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -35,5 +38,30 @@ public class SecondActivity extends AppCompatActivity {
 
         textView.setText(inputText);
 
+    }
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.d(TAG, "onStart");
+    }
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d(TAG, "OnResume");
+    }
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.d(TAG, "OnPause");
+    }
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.d(TAG, "OnStop");
+    }
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d(TAG, "OnDestroy");
     }
 }
