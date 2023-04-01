@@ -54,6 +54,5 @@ public class MainActivity extends AppCompatActivity {
         NotificationManagerCompat notificationManager = NotificationManagerCompat.from(this);
         notificationManager.createNotificationChannel(channel);
         notificationManager.notify(1, builder.build());
-
     }
 }
